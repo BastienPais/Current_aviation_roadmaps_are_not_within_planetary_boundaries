@@ -63,7 +63,3 @@ This work builds upon the *premise* framework for prospective LCA.
 💻 GitHub repository: https://github.com/polca/premise
 
 📄 Scientific article: [https://doi.org/10.1016/j.jclepro.2021.127125](https://doi.org/10.1016/j.rser.2022.112311)
-
-
-Data and Jupyter Notebook: [![DOI](https://zenodo.org/badge/791878165.svg)](https://doi.org/10.5281/zenodo.18682431)\
-Manuscript: 
