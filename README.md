@@ -16,7 +16,8 @@ This framework allows you to:
 - Generate publication-ready figures
 
 📂 **Repository structure**
-.
+
+
 ├── data/                  
 ├── pais2026/
 │   ├── _init_.py       
@@ -39,8 +40,9 @@ This framework allows you to:
 
 The framework produces:
 
--Fuel mix evolution (2023–2050)
--AESA indicators across planetary boundaries:
+
+- Fuel mix evolution (2023–2050)
+- AESA indicators across planetary boundaries:
   - Climate change (RF)
   - Biosphere integrity (%BII)
   - Nitrogen (Tg N yr-1)
