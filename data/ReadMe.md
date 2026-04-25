@@ -2,7 +2,7 @@ This repository provides a reproducible framework to assess the absolute environ
 
 📄 **Preprint**: https://doi.org/10.21203/rs.3.rs-5409598/v1
 
-📦 **Data & code archive**: [![DOI][(https://zenodo.org/badge/791878165.svg)](https://doi.org/10.5281/zenodo.19739876)](https://doi.org/10.5281/zenodo.14186426)
+📦 **Data & code archive**: [![DOI](https://zenodo.org/badge/791878165.svg)](https://doi.org/10.5281/zenodo.14186426)
 
 🌍 **Overview**
 
