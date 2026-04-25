@@ -1,13 +1,12 @@
-This repository provides a reproducible framework to assess the absolute environmental sustainability of global aviation transition scenarios using prospective Life Cycle Assessment (LCA) aligned with the planetary boundaries framework.
+This repository provides a reproducible framework to assess the absolute environmental sustainability of global aviation transition scenarios using prospective Life Cycle Assessment (LCA) aligned with the planetary boundaries framework.  
 
-📄 **Preprint**: https://doi.org/10.21203/rs.3.rs-5409598/v1
-
+📄 **Preprint**: https://doi.org/10.21203/rs.3.rs-5409598/v1  
 📦 **Data & code archive**: [![DOI](https://zenodo.org/badge/791878165.svg)](https://doi.org/10.5281/zenodo.19739876)
+
 
 🌍 **Overview**
 
-This framework allows you to:
-
+This framework allows you to:  
 - Build aviation transition scenarios
 - Model energy demand trajectories (1940–2050)
 - Compute life cycle environmental impacts
@@ -19,21 +18,21 @@ This framework allows you to:
 
 
 ├── data/                  
-├── pais2026/
+├── pais2026/  
 │   ├── _init_.py       
 │   ├── aesa.py         
 │   ├── biosphere.py            
-│   ├── climate.py 
-│   ├── config.py       
+│   ├── climate.py   
+│   ├── config.py        
 │   ├── downscaling.py         
 │   ├── historical.py            
-│   ├── impacts.py 
+│   ├── impacts.py  
 │   ├── main.py       
 │   ├── resources.py         
 │   ├── scenarios.py            
-│   ├── utils.py 
-│   ├── PAIS_2026_Code.ipynb
-└── README.md
+│   ├── utils.py   
+│   ├── PAIS_2026_Code.ipynb   
+└── README.md   
 
 
 📊 **Outputs**
