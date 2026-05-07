@@ -1,4 +1,4 @@
-from .config import SCENARIOS, FUEL_TYPES, EFs_BASE, EFs_WITH_VARIANTS
+from .config import SCENARIOS, FUEL_TYPES, EFs_BASE
 from .climate import climate_change
 from .biosphere import biosphere_integrity
 from .utils import sum_two_lists
@@ -18,9 +18,6 @@ def extract_emission_factors(impacts):
     for fuel in dictionnaire_EF:
         if 'CO2' in dictionnaire_EF[fuel]:
             co2_values = dictionnaire_EF[fuel]['CO2']
-            dictionnaire_EF[fuel]['CO2nonCO2'] = [x + 1.42e-01 for x in co2_values]
-            dictionnaire_EF[fuel]['CO2min'] = [x + 4.49e-02 for x in co2_values]
-            dictionnaire_EF[fuel]['CO2max'] = [x + 2.36e-01 for x in co2_values]
     return dictionnaire_EF
 
 
@@ -118,15 +115,6 @@ def add_dynamic_impacts(dict_impacts):
             )[0]
 
             dict_impacts[scenario][fuel_type]['RF'] = rf_values
-            dict_impacts[scenario][fuel_type]['RFnonCO2'] = rf_nonCO2_values
-            dict_impacts[scenario][fuel_type]['RFmin'] = rf_min_values
-            dict_impacts[scenario][fuel_type]['RFmax'] = rf_max_values
             dict_impacts[scenario][fuel_type]['BIrf'] = biosphere_integrity(dict_impacts[scenario][fuel_type]['RF'])
-            dict_impacts[scenario][fuel_type]['BIrfnonCO2'] = biosphere_integrity(dict_impacts[scenario][fuel_type]['RFnonCO2'])
-            dict_impacts[scenario][fuel_type]['BIrfmin'] = biosphere_integrity(dict_impacts[scenario][fuel_type]['RFmin'])
-            dict_impacts[scenario][fuel_type]['BIrfmax'] = biosphere_integrity(dict_impacts[scenario][fuel_type]['RFmax'])
             dict_impacts[scenario][fuel_type]['BItot'] = sum_two_lists(dict_impacts[scenario][fuel_type]['BIrf'], dict_impacts[scenario][fuel_type]['BIIDLU'])
-            dict_impacts[scenario][fuel_type]['BItotnonCO2'] = sum_two_lists(dict_impacts[scenario][fuel_type]['BIrfnonCO2'], dict_impacts[scenario][fuel_type]['BIIDLU'])
-            dict_impacts[scenario][fuel_type]['BItotmin'] = sum_two_lists(dict_impacts[scenario][fuel_type]['BIrfmin'], dict_impacts[scenario][fuel_type]['BIIDLU'])
-            dict_impacts[scenario][fuel_type]['BItotmax'] = sum_two_lists(dict_impacts[scenario][fuel_type]['BIrfmax'], dict_impacts[scenario][fuel_type]['BIIDLU'])
     return dict_impacts
