@@ -8,7 +8,7 @@ from .downscaling import get_planetary_boundaries
 def compute_aesa(dict_impacts, method='FHN'):
     PB_aviation = get_planetary_boundaries(method)
     dict_AESA = {}
-    stock_PBs = ['RF', 'BItot', 'RFnonCO2', 'BItotnonCO2', 'RFmin', 'RFmax', 'BItotmin', 'BItotmax']
+    stock_PBs = ['RF', 'BItot']
 
     for scenario in SCENARIOS:
         dict_AESA[scenario] = {}
@@ -58,18 +58,3 @@ def extract_2050_results(dict_AESA):
     return df
 
 
-def non_co2_factors(dict_AESA):
-    values = extract_2050_values(dict_AESA)
-    facteurs = []
-    for scenario in SCENARIOS:
-        total = values[scenario]['total']['BItot']
-        nonCO2 = values[scenario]['total']['BItotnonCO2']
-        min_ = values[scenario]['total']['BItotmin']
-        max_ = values[scenario]['total']['BItotmax']
-        facteurs.append({
-            'scenario': scenario,
-            'facteur_nonCO2': nonCO2 / total if total else np.nan,
-            'facteur_min': min_ / total if total else np.nan,
-            'facteur_max': max_ / total if total else np.nan,
-        })
-    return pd.DataFrame(facteurs)
