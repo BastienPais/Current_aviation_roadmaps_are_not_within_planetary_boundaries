@@ -47,7 +47,6 @@ def run_pipeline(
 
     dict_aesa = compute_aesa(dict_impacts, method=method)
     df_2050 = extract_2050_results(dict_aesa)
-    df_factors = non_co2_factors(dict_aesa)
 
     results = {
         'demand': demand,
@@ -64,7 +63,6 @@ def run_pipeline(
         },
         'dict_aesa': dict_aesa,
         'df_2050': df_2050,
-        'df_factors': df_factors,
     }
 
     if include_resources:
@@ -94,4 +92,3 @@ def export_core_results(results, output_dir='outputs', prefix='AESA'):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     results['df_2050'].to_excel(output_dir / f'{prefix}_2050_results.xlsx')
-    results['df_factors'].to_excel(output_dir / f'{prefix}_non_CO2_factors.xlsx', index=False)
