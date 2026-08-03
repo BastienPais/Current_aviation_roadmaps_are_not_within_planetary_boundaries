@@ -63,3 +63,11 @@ This work builds upon the *premise* framework for prospective LCA.
 💻 GitHub repository: https://github.com/polca/premise
 
 📄 Scientific article: [https://doi.org/10.1016/j.jclepro.2021.127125](https://doi.org/10.1016/j.rser.2022.112311)
+
+🅭 **Licensing**
+
+- Source code (contents of `pais2026/`) is released under the MIT License. See `LICENSE-CODE`.
+- Data files (contents of `data/`) are released under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See `LICENSE-DATA`.
+
+
+
