@@ -17,7 +17,8 @@ This framework allows you to:
 📂 **Repository structure**
 
 
-├── data/                  
+├── data/       
+│   ├── outputs - Numerical data underlying the figures of the paper  
 ├── pais2026/  
 │   ├── _init_.py       
 │   ├── aesa.py         
